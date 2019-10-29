@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>linecar</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000;
+			color: #fff;
+		}
+		div#debug {
+			position:absolute;
+			margin:5px;
+		}
+		div#desc {
+			position:absolute;
+			margin:5px;
+			top:50%;
+			margin-top:270px;
+			left:50%;
+			margin-left:-256px;
+			text-align:center;
+			width:512px;
+			color:#999999;
+		}
+		a {
+			color:white;
+		}
+		canvas, img {
+			position:absolute;
+			top:50%;
+			margin-top:-256px;
+			left:50%;
+			margin-left:-256px;
+			border:1px solid gray;
+			
+			width:512px;
+			height:512px;
+			
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			
+			image-rendering: optimizeSpeed;             /* Older versions of FF          */
+			image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+			image-rendering: -webkit-optimize-contrast; /* Safari                        */
+			image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+			image-rendering: pixelated;                 /* Awesome future-browsers       */
+			-ms-interpolation-mode: nearest-neighbor;   /* IE                            */
+		}
+	</style>
+	<script src="allegro.js"></script>
+	<script src="linecar.js" style="width:512px; height:512px;"></script>
+</head>
+<body>
+	<div id="debug"></div>
+	<canvas unselectable="on" id="canvas_id" width="512" height="512"></canvas>
+	<div id="desc">leftclick: create/select point | rightclick: remove point | L: toggle loop<br/><i>by <a href="http://www.ratking.de">ratking</a></i></div>
+</body>
+</html>
